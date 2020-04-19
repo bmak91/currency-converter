@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "LBP Converter",
+  "version": "1.0.1",
+  "description": "Automatically convert LBP to USD in web pages",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Convert"
+  },
+  "web_accessible_resources": ["js/*"],
+  "permissions": ["storage", "activeTab", "https://lirarate.com/*"]
+}
