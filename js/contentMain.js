@@ -14,7 +14,9 @@ export async function main({ rate }) {
         node.childNodes[0].nodeType === Node.TEXT_NODE &&
         node.innerText
       ) {
-        let val = node.innerText.match(/LBP(\ )?[\d,]+(\.\d*)?/);
+        let val = node.innerText.match(
+          /(LBP(\ )?[\d,]+(\.\d*)?|[\d,]+(\.\d*)?(\ )?LBP)/
+        );
         if (val && val[0]) {
           let o = currency(val[0]).divide(oRate);
           let c = currency(val[0]).divide(rate);
